@@ -11,6 +11,10 @@
   </head>
 
   <body>
+  <% if flash[:notice] %>
+    <%= flash[:notice] %>
+    <% end %>
     <%= yield %>
+    <%= render 'shared/navbar' %>
   </body>
 </html>
